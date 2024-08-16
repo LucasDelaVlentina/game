@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokempô</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Tela Inicial -->
+    <div id="start-screen" class="screen">
+        <img src="images/fundo.png" alt="Background Image" class="background">
+        <button class="play-button" onclick="startGame()">Play</button>
+    </div>
+
+    <!-- Tela do Jogo -->
+    <div id="game-screen" class="screen" style="display: none;">
+        <h1>Jokempô</h1>
+        <div class="game-container">
+            <div class="player-choice">
+                <h2>Você</h2>
+                <img id="player-icon" src="images/player.png" alt="Princesa">
+            </div>
+            <div class="versus">VS</div>
+            <div class="bot-choice">
+                <h2>Bot</h2>
+                <img id="bot-icon" src="images/bot.png" alt="bot">
+            </div>
+        </div>
+        <div class="choices">
+            <button onclick="play('pedra')">Pedra</button>
+            <button onclick="play('papel')">Papel</button>
+            <button onclick="play('tesoura')">Tesoura</button>
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <!-- Tela de Vitória Final -->
+    <div id="final-screen" class="screen" style="display: none;">
+        <img src="images/fundo_cred.png" alt="Final Screen Background" class="background">
+        <h1>Parabéns!</h1>
+        <h3>Você aceita namorar comigo?</h3>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
